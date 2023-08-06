@@ -1,0 +1,32 @@
+import { createStackNavigator } from "@react-navigation/stack";
+import BottomTab from "./BottomTab";
+
+function MainStack() {
+
+  const Stack = createStackNavigator();
+
+  return (
+    <Stack.Navigator
+      initialRouteName="application"
+>
+      {/* <Stack.Screen
+        name="auth"
+        component={AuthStack}
+        options={{
+          headerShown: false,
+        }}
+      /> */}
+
+      <Stack.Screen
+        name="application"
+        component={BottomTab}
+        options={{
+          headerShown: false,
+        }}
+      />
+     
+    </Stack.Navigator>
+  );
+}
+
+export default MainStack;
