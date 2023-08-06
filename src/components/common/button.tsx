@@ -3,7 +3,7 @@ import React from 'react'
 import { TButtonProps } from '../../constants/types/types'
 import { Caption, TouchableRipple } from 'react-native-paper'
 import { Colors } from 'react-native/Libraries/NewAppScreen'
-import CustomText from '../CustomText'
+import CustomText from './CustomText'
 
 const Button = ({ title, onPress, children, m, mr, ml, mb, mt, p, pt, pb, pr, pl, bg, color, w, h, br, style }: TButtonProps) => {
     return (

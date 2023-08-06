@@ -2,10 +2,10 @@ import { StyleSheet, Text, View, Image } from 'react-native'
 import React from 'react'
 import Colors from '../../theme/colors'
 import Button from '../../components/common/button'
-import CustomText from '../../components/CustomText'
+import CustomText from '../../components/common/CustomText'
 import Feather from 'react-native-vector-icons/Feather'
 
-const GettingStarted = () => {
+const GettingStarted = ({navigation}:any) => {
     return (
         <View style={styles.container}>
             <View style={{ height: '85%', width: '100%',justifyContent:"center",alignItems:"center"}}>
@@ -14,7 +14,7 @@ const GettingStarted = () => {
             <View style={{flexDirection:"column",justifyContent:"flex-end", height: '15%', width: '100%' }}>
                 <View style={styles.buttonsHolder}>
                     <View style={{ width: "50%" }}>
-                        <Button onPress={function (): void { }} br={1} h={70} bg={Colors.secondary} >
+                        <Button onPress={()=> navigation.navigate("SignUp")} br={1} h={70} bg={Colors.secondary} >
                             <View style={{ flexDirection: 'row', alignItems: "center" }}>
                                 <CustomText color={Colors.primary}>Open Account</CustomText>
                                 <Feather name='arrow-up-right' color={Colors.primary} />
@@ -22,7 +22,7 @@ const GettingStarted = () => {
                         </Button>
                     </View>
                     <View style={{ width: "50%" }}>
-                        <Button title='Sign In' onPress={function (): void { }} br={1} h={70} color={Colors.white} bg={Colors.primary} />
+                        <Button title='Sign In' onPress={() => navigation.navigate("Login")} br={1} h={70} color={Colors.white} bg={Colors.primary} />
                     </View>
                 </View>
             </View>
