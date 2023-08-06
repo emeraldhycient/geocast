@@ -8,7 +8,7 @@ import Feather from 'react-native-vector-icons/Feather'
 const GettingStarted = () => {
     return (
         <View style={styles.container}>
-            <View style={{ height: '85%', width: '100%',justifyContent:"center",alignItems:"center" }}>
+            <View style={{ height: '85%', width: '100%',justifyContent:"center",alignItems:"center"}}>
                 <Image source={require('../../../assets/images/onboarding/phone.png')} style={styles.image} />
             </View>
             <View style={{flexDirection:"column",justifyContent:"flex-end", height: '15%', width: '100%' }}>
@@ -43,7 +43,8 @@ const styles = StyleSheet.create({
     image: {
         height: '75%',
         width: '100%',
-        resizeMode: 'contain'
+        resizeMode: 'contain',
+        marginTop:20
     },
     buttonsHolder: {
         flexDirection: 'row',
