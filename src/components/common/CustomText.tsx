@@ -5,7 +5,7 @@ const CustomText = ({ children, style, fontSize, color, fontFamily, ...rest }:an
     const defaultStyles = {
         fontSize: fontSize || 16,
         color: color || 'black',
-        fontFamily: fontFamily || 'Arial',
+        fontFamily: fontFamily,
     };
 
     return (
@@ -18,7 +18,6 @@ const CustomText = ({ children, style, fontSize, color, fontFamily, ...rest }:an
 CustomText.defaultProps = {
     fontSize: 16,
     color: 'black',
-    fontFamily: 'Arial',
 };
 
 export default CustomText;
