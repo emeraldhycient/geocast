@@ -17,5 +17,15 @@ export interface TButtonProps {
     pb?: number | string,
     pr?: number | string,
     pl?: number | string,
-    br? : number
+    br?: number
+}
+
+export interface TCustomHeader {
+    title?: string,
+    leftIcon?: any,
+    rightIcon?: any,
+    onLeftPress?: () => void,
+    onRightPress?: () => void,
+    headerStyle?: any,
+    titleStyle?: any
 }

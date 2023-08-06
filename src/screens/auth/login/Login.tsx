@@ -1,10 +1,12 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import CustomHeader from '../../../components/common/Header'
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const Login = () => {
+const Login = ({navigation}:any) => {
   return (
     <View>
-      <Text>Login</Text>
+          <CustomHeader title='Sign in to GeoCast' leftIcon={<MaterialCommunityIcons name='arrow-left' size={20} />} onLeftPress={() => navigation.goBack()} />
     </View>
   )
 }
