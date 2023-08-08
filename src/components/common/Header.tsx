@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         paddingHorizontal: 16,
         height: 100,
-        backgroundColor: '#f0f0f0',
+        backgroundColor: '#fff',
     },
     iconContainer: {
         padding: 8,
@@ -44,6 +44,7 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 18,
         color: 'black',
+        fontWeight:"400"
     },
 });
 

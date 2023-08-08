@@ -5,7 +5,7 @@ import { Caption, TouchableRipple } from 'react-native-paper'
 import { Colors } from 'react-native/Libraries/NewAppScreen'
 import CustomText from './CustomText'
 
-const Button = ({ title, onPress, children, m, mr, ml, mb, mt, p, pt, pb, pr, pl, bg, color, w, h, br, style }: TButtonProps) => {
+const Button = ({ title, onPress, children, m, mr, ml, mb, mt, p, pt, pb, pr, pl, bg, color, w, h, br, style ,...rest}: TButtonProps) => {
     return (
         <TouchableRipple onPress={onPress}>
             <View style={style ? style :
@@ -24,7 +24,9 @@ const Button = ({ title, onPress, children, m, mr, ml, mb, mt, p, pt, pb, pr, pl
                     paddingLeft: pl,
                     width: w ? w : '100%',
                     height: h ? h : 50,
-                }}>
+                }}
+                {...rest}
+            >
                 <View style={{ width: "100%", height: "100%", justifyContent: "center", alignItems: "center" }}>
                     {
                         title ?

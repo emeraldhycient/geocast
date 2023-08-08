@@ -14,7 +14,7 @@ const GettingStarted = ({navigation}:any) => {
             <View style={{flexDirection:"column",justifyContent:"flex-end", height: '15%', width: '100%' }}>
                 <View style={styles.buttonsHolder}>
                     <View style={{ width: "50%" }}>
-                        <Button onPress={()=> navigation.navigate("SignUp")} br={1} h={70} bg={Colors.secondary} >
+                        <Button onPress={()=> navigation.navigate("SelectOnboarding")} br={1} h={70} bg={Colors.accent} >
                             <View style={{ flexDirection: 'row', alignItems: "center" }}>
                                 <CustomText color={Colors.primary}>Open Account</CustomText>
                                 <Feather name='arrow-up-right' color={Colors.primary} />
