@@ -1,6 +1,6 @@
 import { StyleSheet, Image, View } from 'react-native'
-import React,{useState} from 'react'
-import { TextInput } from "react-native-paper"
+import React, { useState } from 'react'
+import { TextInput, TouchableRipple } from "react-native-paper"
 import CustomHeader from '../../../components/common/Header'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import CustomText from '../../../components/common/CustomText';
@@ -36,7 +36,9 @@ const Login = ({ navigation }: any) => {
               <MaterialCommunityIcons name='fingerprint' size={20} style={{ marginLeft: 10 }} color={Colors.primary} />
             </View>
           </Button>
-          <CustomText style={{ marginVertical: 10, textAlign: "center", fontSize: 14, fontWeight: "400" }}>I forgot my password </CustomText>
+          <TouchableRipple onPress={() => navigation.navigate("ForgotPassword")}>
+            <CustomText style={{ marginVertical: 10, textAlign: "center", fontSize: 14, fontWeight: "400" }}>I forgot my password </CustomText>
+          </TouchableRipple>
         </View>
       </View>
     </View>

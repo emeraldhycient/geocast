@@ -43,7 +43,7 @@ const SignUp = ({ navigation }: any) => {
             <CustomText style={{ fontSize: 14, fontWeight: '300', lineHeight: 24, textAlign: "center" }}>By continuing, you agree to our  <CustomText style={{ marginTop: 20, fontSize: 14, fontWeight: '300', lineHeight: 24, textAlign: "center", color: Colors.primary }}>Terms of Service , Broadcaster Agreement & Privacy Policy</CustomText></CustomText>
           </View>
         </View>
-        <Button title='Get Started' onPress={() => navigation.navigate("SignUp")} br={6} h={50} color={Colors.white} bg={Colors.primary} />
+        <Button title='Get Started' onPress={() => navigation.navigate("Verification")} br={6} h={50} color={Colors.white} bg={Colors.primary} />
       </View>
     </View>
   )
