@@ -21,10 +21,10 @@ const ScrollCard: React.FC<Props> = ({ image, title, description, index, onPress
     const navigation = useNavigation()
     return (
         <View style={styles.container}>
-            <View style={{ height: '50%', width: '100%', justifyContent: "center", alignItems: "center" }}>
-                <Image source={image} style={styles.image} />
+            <View style={{ height: '60%', width: '100%', justifyContent: "center", alignItems: "center"}}>
+                <Image source={image} resizeMode='contain' style={styles.image} />
             </View>
-            <View style={{ flexDirection: "column", justifyContent: "flex-end", height: '40%', width: '100%' }}>
+            <View style={{ flexDirection: "column", justifyContent: "center", height: '40%', width: '100%',paddingHorizontal:10 }}>
                 <View style={{ flexDirection: 'row', justifyContent: "flex-start", alignItems: "center" }}>
                     <View style={[styles.dot, { width: index == 0 ? 22 : 10, backgroundColor: index == 0 ? Colors.primary : Colors.accent }]}></View>
                     <View style={[styles.dot, { width: index == 1 ? 22 : 10, backgroundColor: index == 1 ? Colors.primary : Colors.accent }]}></View>
@@ -62,6 +62,7 @@ const styles = StyleSheet.create({
         backgroundColor: Colors.white,
         flexDirection: "column",
         alignItems: 'center',
+        width:"100%",
         justifyContent: 'center',
     },
     image: {

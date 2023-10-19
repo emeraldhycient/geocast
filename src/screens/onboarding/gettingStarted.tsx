@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, Image } from 'react-native'
 import React, { useState } from 'react'
 import Colors from '../../theme/colors'
 import ScrollCard from '../../components/auth/scrollCard'
+import SelectOnboarding from '../../components/auth/selectAction'
 
 const GettingStarted = ({ navigation }: any) => {
     const [page, setpage] = useState(0)
@@ -18,7 +19,7 @@ const GettingStarted = ({ navigation }: any) => {
             }
             {
                 page === 2 && 
-            <ScrollCard image={require('../../../assets/images/onboarding/img3.png')} title={'Live Streaming'} description={'Go beyond traditional streaming with Geocast. Share your real-time experiences, discoveries, and adventures with the world. Showcase your creativity, talents, and interests to a global audience.'} index={page} onPress={()=> setpage(0)} />
+                <SelectOnboarding/>
             }
          
         </View>
