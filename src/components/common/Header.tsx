@@ -14,10 +14,10 @@ const CustomHeader = ({ title, leftIcon, rightIcon, onLeftPress, onRightPress, h
                         </TouchableOpacity>
                     )}
                 </View>
-                <View style={{ width: "80%",justifyContent:"center",alignItems:"center" }}>
+                <View style={{ width: "70%",justifyContent:"center",alignItems:"center" }}>
                     <CustomText style={[styles.title, titleStyle]}>{title}</CustomText>
                 </View>
-                <View style={{ width: "10%" }}>
+                <View style={{ width: "20%" }}>
                     {rightIcon && onRightPress && (
                         <TouchableOpacity onPress={onRightPress} style={styles.iconContainer}>
                             {rightIcon}

@@ -7,9 +7,12 @@ import CustomText from '../../../components/common/CustomText';
 import CustomTextInput from '../../../components/common/CustomTextInput';
 import Colors from '../../../theme/colors';
 import Button from '../../../components/common/button';
+import useAuthenticationState from '../../../states/zustandStore/authentication';
 
 const Login = ({ navigation }: any) => {
   const [secureTextEntry, setSecureTextEntry] = useState(true);
+  const setIsAuthenticated = useAuthenticationState((state: any) => state.setIsAuthenticated);
+
 
   return (
     <View style={{ flex: 1, backgroundColor: Colors.white }}>
@@ -29,8 +32,8 @@ const Login = ({ navigation }: any) => {
           />
         } />
         <View style={{ width: "100%", marginHorizontal: "auto", height: 160, flexDirection: "column", justifyContent: "space-between", marginTop: 40 }}>
-          <Button title='Sign in to your account' onPress={() => navigation.navigate("SignUp")} br={6} h={50} color={Colors.white} bg={Colors.primary} />
-          <Button onPress={() => navigation.navigate("Login")} style={{ backgroundColor: Colors.white, borderColor: Colors.primary, borderWidth: 0.5, width: "100%", borderRadius: 6, height: 50, justifyContent: "center", alignItems: "center", alignSelf: "center" }} >
+          <Button title='Sign in to your account' onPress={() => setIsAuthenticated(true)} br={6} h={50} color={Colors.white} bg={Colors.primary} />
+          <Button bg='white' onPress={() => navigation.navigate("Login")} style={{ backgroundColor: "white", borderColor: Colors.primary, borderWidth: 0.5, width: "100%", borderRadius: 6, height: 50, justifyContent: "center", alignItems: "center", alignSelf: "center" }} >
             <View style={{ flexDirection: "row", alignItems: "center" }}>
               <CustomText style={{ fontSize: 14, fontWeight: '300', lineHeight: 24, textAlign: "center", color: Colors.primary }}>Sign in using fingerprint</CustomText>
               <MaterialCommunityIcons name='fingerprint' size={20} style={{ marginLeft: 10 }} color={Colors.primary} />
