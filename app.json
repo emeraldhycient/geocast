@@ -22,6 +22,11 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyAUvbU20vEXvSO-kWrIKQRGhD5FQAgALzg"
+        }
+      },
       "package": "com.geocast"
     },
     "web": {
