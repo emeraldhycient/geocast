@@ -8,6 +8,7 @@ import React from 'react';
 import { View, TouchableOpacity, Text, StyleSheet, Image } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons'; // Make sure to install this package
 import Trending from "../screens/trending/trending";
+import Stream from "../screens/livestream/Stream";
 
 
 
@@ -51,7 +52,7 @@ function BottomTab() {
       />
       <Screen
         name="stream"
-        component={Dashboard}
+        component={Stream}
         options={{
           tabBarIcon: ({ color }) => (
             <View
